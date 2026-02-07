@@ -323,8 +323,7 @@ function AppContent() {
         <header className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2 text-left">Panel Bench</h1>
           <p className="text-gray-600 text-base leading-5 text-left relative top-[9px]">
-            A comprehensive collection of test cases for design panel properties including Position, Auto Layout,
-            Text Layout, Appearance, Typography, Fill, Stroke, Effects, and Element Types.
+            the SOTA open-source test suite for code-first visual editors
           </p>
         </header>
 
