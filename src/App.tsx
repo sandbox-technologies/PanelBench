@@ -323,7 +323,7 @@ function AppContent() {
         <header className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2 text-left">Panel Bench</h1>
           <p className="text-gray-600 text-base leading-5 text-left relative top-[9px]">
-            the open-source test suite for code-first visual editors
+            The open-source test suite for code-first visual editors
           </p>
         </header>
 
