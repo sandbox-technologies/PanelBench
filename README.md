@@ -1,4 +1,4 @@
-# Design Panel Test Gym
+# PanelBench
 
 A comprehensive test suite for evaluating the correctness of visual design panels in code-first design tools. Run these tests against any design-in-code tool to verify that what the panel displays actually matches the underlying CSS.
 
@@ -126,6 +126,7 @@ Add new test cases by creating a `<TestItem>` in the appropriate section file un
 1. Apply a single, unambiguous CSS property to the target element
 2. Have a clear `testId` and `label` describing the expected value
 3. Be visually verifiable by clicking the element and checking the panel
+4. Include in the pull-request what the expect output is for that selection.
 
 ---
 
@@ -135,4 +136,4 @@ MIT
 
 ---
 
-Built by [Inspector](https://tryinspector.com)
+Built by the [Inspector](https://tryinspector.com) team.
