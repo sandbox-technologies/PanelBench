@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --custom-color: #8B5CF6;
+  --custom-spacing: 24px;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Helper class for section containers */
+.test-section {
+  @apply bg-white rounded-xl p-6 mb-6 shadow-sm;
+}
+
+.test-section h2 {
+  @apply text-xl font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200;
+}
+
+.test-section h3 {
+  @apply text-sm font-medium text-gray-600 mb-3 mt-4;
+}
+
+.test-grid {
+  @apply grid gap-4;
+}
+
+.test-item {
+  @apply p-4 border border-gray-200 rounded-lg;
+}
+
+.test-label {
+  @apply text-xs text-gray-500 mt-2 font-mono;
+}
+
+/* Checkered background for transparency testing */
+.bg-checkered {
+  background-image: 
+    linear-gradient(45deg, #ccc 25%, transparent 25%),
+    linear-gradient(-45deg, #ccc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ccc 75%),
+    linear-gradient(-45deg, transparent 75%, #ccc 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  background-color: #fff;
+}
+
+/* Test item header with ID and checkbox */
+.test-item-header {
+  @apply flex items-center justify-between mb-2 pb-2 border-b border-gray-100;
+}
+
+.test-id-badge {
+  @apply text-xs font-mono bg-gray-100 text-gray-600 px-2 py-0.5 rounded;
+}
+
+.test-fail-checkbox {
+  @apply flex items-center gap-1.5 cursor-pointer select-none;
+}
+
+.test-fail-checkbox input[type="checkbox"] {
+  @apply w-4 h-4 rounded border-gray-300 text-red-500 focus:ring-red-500 cursor-pointer;
+}
+
+.test-fail-label {
+  @apply text-xs text-gray-500;
+}
+
+.test-item-failed {
+  @apply border-red-300 bg-red-50;
+}
+
+.test-item-failed .test-id-badge {
+  @apply bg-red-100 text-red-700;
+}
+
+.test-item-failed .test-fail-label {
+  @apply text-red-600 font-medium;
+}
+
+/* Subsection headers with IDs */
+.test-section h3 {
+  @apply text-sm font-medium text-gray-600 mb-3 mt-4 scroll-mt-4;
+}
+
+.subsection-id {
+  @apply text-xs font-mono bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded ml-2;
+}
+
+/* Table of contents styles */
+.toc-section {
+  @apply mb-2;
+}
+
+.toc-section-title {
+  @apply text-sm font-medium text-gray-700 hover:text-gray-900;
+}
+
+.toc-subsections {
+  @apply ml-4 mt-1 space-y-0.5;
+}
+
+.toc-subsection {
+  @apply text-xs text-gray-500 hover:text-gray-700;
+}
+
+/* Copy button and toast */
+.copy-btn {
+  @apply px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors;
+}
+
+.copy-btn:disabled {
+  @apply bg-gray-300 cursor-not-allowed;
+}
+
+.copy-toast {
+  @apply fixed bottom-4 right-4 px-4 py-2 bg-gray-900 text-white text-sm rounded-lg shadow-lg;
+}
+
+/* Failed count badge */
+.failed-count {
+  @apply inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 text-xs font-medium bg-red-500 text-white rounded-full ml-2;
+}
+
+/* Test note input */
+.test-note-container {
+  @apply mt-3 pt-3 border-t border-red-200;
+}
+
+.test-note-input {
+  @apply w-full px-3 py-2 text-sm border border-red-200 rounded-lg bg-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-300 focus:border-transparent resize-none;
+}
+
+/* Floating failed tests panel */
+.floating-failed-panel {
+  @apply fixed bottom-6 right-6 bg-white rounded-xl shadow-lg border border-gray-200 p-4 z-50;
+  min-width: 240px;
+}
+
+.floating-panel-header {
+  @apply flex items-center justify-between mb-3 pb-2 border-b border-gray-100;
+}
+
+.floating-panel-title {
+  @apply text-sm font-semibold text-gray-700;
+}
+
+.floating-panel-count {
+  @apply inline-flex items-center justify-center min-w-[24px] h-6 px-2 text-sm font-bold bg-red-500 text-white rounded-full;
+}
+
+.floating-panel-buttons {
+  @apply flex flex-col gap-2;
+}
+
+.floating-panel-btn {
+  @apply w-full px-4 py-2 text-sm font-medium rounded-lg transition-colors;
+  @apply bg-gray-100 text-gray-700 hover:bg-gray-200;
+}
+
+.floating-panel-btn-primary {
+  @apply bg-blue-500 text-white hover:bg-blue-600;
+}
